@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "willsides/dropdown-login-menu",
+	"version": "0.1.0",
+	"title": "Dropdown Login Menu",
+	"category": "widgets",
+	"icon": "admin-users",
+	"description": "A login menu that drops down from an account icon",
+	"example": {},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"color": {
+			"background": true,
+			"text": true,
+			"link": true,
+			"gradients": false
+		},
+		"customClassName": true
+	},
+	"attributes": {
+		"iconColor": {
+			"type": "string",
+			"default": "rgba(0, 0, 0, 1)"
+		},
+		"horAlign": {
+			"type": "string",
+			"default": "right"
+		}
+	},
+	"textdomain": "dropdown-login-menu",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
