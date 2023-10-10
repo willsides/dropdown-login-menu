@@ -27,6 +27,10 @@
 		"horAlign": {
 			"type": "string",
 			"default": "right"
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "background"
 		}
 	},
 	"textdomain": "dropdown-login-menu",

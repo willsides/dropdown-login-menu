@@ -25,6 +25,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const ALLOWED_BLOCKS = ['core/categories', 'core/paragraph', 'core/social-link', 'core/navigation', 'core/navigation-submenu', 'core/home-link', 'core/navigation-link', 'core/category', 'core/spacer', 'core/social-links', 'core/search', 'core/loginout'];
+const TEMPLATE = [['core/loginout', {
+  displayLoginAsForm: true
+}]];
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_5__.name, {
   edit: ({
     attributes,
@@ -45,8 +49,6 @@ __webpack_require__.r(__webpack_exports__);
     if (blockProps.style && blockProps.style.backgroundColor) {
       delete blockProps.style.backgroundColor;
     }
-    const ALLOWED_BLOCKS = ['core/navigation-link', 'core/category', 'core/spacer', 'core/search', 'core/social-links', 'core/loginout'];
-    const TEMPLATE = ['core/loginout'];
     return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       ...blockProps
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.SelectControl, {
@@ -90,7 +92,7 @@ __webpack_require__.r(__webpack_exports__);
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
       d: "M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"
     }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-      class: `ws-menu-content ws-menu-align-${horAlign}${backgroundColor ? ` has-background-color has-${backgroundColor}-background-color` : ''}`,
+      class: `ws-menu-content ws-menu-align-${horAlign}${backgroundColor ? ` has-${backgroundColor}-background-color` : ''}`,
       style: {
         backgroundColor: style?.color?.background
       },
@@ -135,7 +137,7 @@ __webpack_require__.r(__webpack_exports__);
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
       d: "M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"
     }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-      class: `ws-menu-content ws-menu-align-${horAlign}${backgroundColor ? ` has-background-color has-${backgroundColor}-background-color` : ''}`,
+      class: `ws-menu-content ws-menu-align-${horAlign}${backgroundColor ? ` has-${backgroundColor}-background-color` : ''}`,
       style: {
         backgroundColor: style?.color?.background
       },
@@ -204,7 +206,7 @@ module.exports = window["wp"]["components"];
   \************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"willsides/dropdown-login-menu","version":"0.1.0","title":"Dropdown Login Menu","category":"widgets","icon":"admin-users","description":"A login menu that drops down from an account icon","example":{},"supports":{"html":false,"anchor":true,"color":{"background":true,"text":true,"link":true,"gradients":false},"customClassName":true},"attributes":{"iconColor":{"type":"string","default":"rgba(0, 0, 0, 1)"},"horAlign":{"type":"string","default":"right"}},"textdomain":"dropdown-login-menu","editorScript":"file:./index.js","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"willsides/dropdown-login-menu","version":"0.1.0","title":"Dropdown Login Menu","category":"widgets","icon":"admin-users","description":"A login menu that drops down from an account icon","example":{},"supports":{"html":false,"anchor":true,"color":{"background":true,"text":true,"link":true,"gradients":false},"customClassName":true},"attributes":{"iconColor":{"type":"string","default":"rgba(0, 0, 0, 1)"},"horAlign":{"type":"string","default":"right"},"backgroundColor":{"type":"string","default":"background"}},"textdomain":"dropdown-login-menu","editorScript":"file:./index.js","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 

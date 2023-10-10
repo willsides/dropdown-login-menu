@@ -6,6 +6,11 @@ import './style.scss';
 
 import metadata from './block.json';
 
+const ALLOWED_BLOCKS = [ 'core/categories', 'core/paragraph', 'core/social-link', 'core/navigation', 'core/navigation-submenu', 'core/home-link', 'core/navigation-link', 'core/category', 'core/spacer', 'core/social-links', 'core/search', 'core/loginout' ];
+const TEMPLATE = [
+	[ 'core/loginout', {displayLoginAsForm:true} ],
+  ];
+
 registerBlockType( metadata.name, {
 
     edit: ({ attributes, setAttributes }) => {
@@ -24,9 +29,6 @@ registerBlockType( metadata.name, {
 		if (blockProps.style && blockProps.style.backgroundColor) {
 			delete blockProps.style.backgroundColor;
 		}
-
-		const ALLOWED_BLOCKS = [ 'core/navigation-link', 'core/category', 'core/spacer', 'core/search', 'core/social-links', 'core/loginout' ];
-		const TEMPLATE = [ 'core/loginout' ]
 
         return (
             <div { ...blockProps }>
@@ -57,7 +59,7 @@ registerBlockType( metadata.name, {
 						<path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
 					</svg>
 				</button>
-				<ul class={`ws-menu-content ws-menu-align-${horAlign}${backgroundColor ? ` has-background-color has-${backgroundColor}-background-color` : ''}`}
+				<ul class={`ws-menu-content ws-menu-align-${horAlign}${backgroundColor ? ` has-${backgroundColor}-background-color` : ''}`}
 				 style={{ backgroundColor: style?.color?.background }}
 				 aria-hidden="false">
                 	<InnerBlocks 
@@ -95,7 +97,7 @@ registerBlockType( metadata.name, {
 						<path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
 					</svg>
 				</button>
-				<ul class={`ws-menu-content ws-menu-align-${horAlign}${backgroundColor ? ` has-background-color has-${backgroundColor}-background-color` : ''}`}
+				<ul class={`ws-menu-content ws-menu-align-${horAlign}${backgroundColor ? ` has-${backgroundColor}-background-color` : ''}`}
 				 style={{ backgroundColor: style?.color?.background }}
 				 aria-hidden="true">
                 	<InnerBlocks.Content />
